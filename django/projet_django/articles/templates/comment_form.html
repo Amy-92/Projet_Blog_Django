@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    <title>Commentaire</title>
+{% endblock title %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+
+        <button type="submit" class ="btn-warning">Commenter</button>
+    </form>
+{% endblock content %}

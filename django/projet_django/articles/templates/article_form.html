@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    <title> Creer un nouvel article </title>
+{% endblock title %}
+
+{% block content %}
+    <h2>Creer un nouvel article</h2>
+
+    <form method ="post">
+        {% csrf_token %}
+        {{form}}
+        <button type ="submit" class ="btn-warning">Valider</button>
+    </form>
+{% endblock content %}

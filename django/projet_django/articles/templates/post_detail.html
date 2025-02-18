@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Details</title>
+{% endblock title %}
+
+{% block content %}
+    <h1>{{article.titre}}</h1>
+    <p>{{article.contenu}}</p>
+    <p>Publie le {{article.date_publication|date:"d/m/Y H:i"}}</p>
+    <a href = "{% url 'comment_create' %}"><button>Commenter</button></a>
+    <a href = "{% url 'article_modify' article.id %}"><button>Modifier</button></a>
+    <a href = "{% url 'article_delete' article.id %}"><button>Supprimer</button></a>
+{% endblock content %}
